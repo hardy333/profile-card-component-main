@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+
+    /* ### Primary */
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+    /* ### Neutral */
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+html{
+    font-size: 62.5%;
+
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    background:url("./images/bg-pattern-top.svg") no-repeat left -13vw top -25vw, url("./images/bg-pattern-bottom.svg") no-repeat right -14vw bottom -37vw, var(--Dark-cyan);
+
+    background-size: 65%;
+}
+
+@media screen and (max-width: 700px){
+    body{
+   
+        background-size: 80%;
+
+    }
+}
+
+/* Card start */
+.card{
+    margin: 10px;
+    max-width: 100%;
+    width: 35rem;
+
+    background-color: #fff;
+
+    border-radius: 2rem;
+    overflow:hidden;
+
+}
+
+.card__bg-img{
+    width: 100%;
+    height: 15rem;
+    background: url("./images/bg-pattern-card.svg");
+
+}
+
+.card__content{
+    position: relative;
+    padding-top: 5rem;
+    text-align: center;
+}
+.user__img{
+    display: block;
+    border-radius: 100%;
+    border: 5px solid #fff;
+    
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.card h2{
+    font-size: 2rem;
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    color: var(--Very-dark-desaturated-blue);
+}
+.card h2 span{
+    color: var(--Dark-gray);
+    font-weight: 400;
+}
+.card p{
+    color: var(--Dark-gray);
+    margin: 1rem 0rem;
+    font-size: 1.4rem;
+}
+
+.stats{
+    padding: 2.5rem 1.5rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--Dark-grayish-blue);
+
+    list-style: none;
+
+    display: flex;
+
+}
+.stat{
+    text-align: center;
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.stat + .stat{
+    margin-left: 5px;
+
+}
+.stat__number{
+    font-weight: 700;
+    color: var(--Very-dark-desaturated-blue);
+}
+.stat__name{
+    font-size: 1.3rem;
+    color: var(--Dark-gray);
+}
+/* Card end */
