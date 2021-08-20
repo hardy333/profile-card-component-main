@@ -9,6 +9,7 @@
   <title>Frontend Mentor | Profile card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,27 +17,37 @@
     <div class="card__bg-img">
     </div>
     <div class="card__content">
-      <img class="user__img" src="./images/image-victor.jpg" alt="person image" >
+      <div class="user__img-wrapper">
+        <img class="user__img" src="./images/image-victor.jpg" alt="person image" >
+      </div>
       
-      <h2>Vector Ceres <span>26</span></h2>
-      <p>London</p>
+      <h2 class="animate__faster animate__fadeIn animate__slideInLeft animate__animated ">Vector Ceres <span>26</span></h2>
+      <p class="animate__faster animate__fadeIn  animate__slideInRight animate__animated 	">London</p>
 
       <ul class="stats">
-        <li class="stat">
-          <span class="stat__number">80k</span>
+        <li class="stat animate__faster animate__animated animate__zoomIn ">
+          <span class="stat__number">
+            <span class="number-span" data-increment="1" data-end-number="80" data-start-number="0" >80</span>k
+          </span>
           <span class="stat__name">Followers</span>
         </li>
-        <li class="stat">
-          <span class="stat__number">803k</span>
+        <li class="stat animate__faster animate__animated animate__zoomIn  ">
+          <span class="stat__number">
+            <span class="number-span" data-increment="10" data-end-number="803" data-start-number="0" >803</span>k
+          </span>
           <span class="stat__name">Likes</span>
         </li>
-        <li class="stat">
-          <span class="stat__number">1.4k</span>
+        <li class="stat animate__faster  animate__animated animate__zoomIn ">
+          <span class="stat__number">
+            <span class="number-span" data-increment="2" data-end-number="140" data-start-number="0" >140</span>k
+          </span>
           <span class="stat__name">Photos</span>
         </li>
       </ul>
     </div>
   </article>
 
+
+  <script src="index.js"></script>
 </body>
 </html>
